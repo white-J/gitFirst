@@ -1,0 +1,71 @@
+
+.passMain {
+    float: left;
+    position: relative;
+    background: #fff;
+    width: 74%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.rightList {
+    float: right;
+    position: relative;
+    width: 22%;
+    height: 200px;
+    background: #fff;
+}
+
+.passMain h2 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding: 10px 0;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: center;
+}
+
+.passMain p {
+    text-align: center;
+    height: 24px;
+    border-bottom: 2px solid #ccc;
+}
+
+.passMain p > span, .passMain p > a {
+    padding: 0 5%;
+    border-left: 2px solid #ccc;
+}
+.passMain p > span{
+    border-left: none;
+}
+
+.passMain #mainText{
+    padding: 5% 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 200px;
+    text-indent: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

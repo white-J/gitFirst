@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PUT INFO</title>
+		<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div >
+			<p>
+				<span>id:</span>
+				<input type="text" id="id" name="id">
+			</p>
+			<p>
+				<span>name:</span>
+				<input type="text" id="name" name="name">
+			</p>
+			<p>
+				<span>age:</span>
+				<input type="text" id="age" name="age">
+			</p>
+			<p>
+				<button id="submit">tijiao</button>
+			</p>
+		</div>
+		<div id="test">999999</div>
+		<script type="text/javascript">
+			$("#test").on('click',function () {
+				alert('999');
+			});
+			$("#submit").on('click',function () {
+				var id=$("#id").val();
+				var name=$("#name").val();
+				var age=$("#age").val();
+				$.ajax({
+					type: "POST",
+					url: "users/updateUser",//请求地址
+					data: "id=" + id + "&name=" +name +"&age="+  age,
+					beforeSend: function () {
+					},
+					success: function (res) {
+						alert('11');
+						var res= eval("(" + res + ")");
+						if (res.Success) {
+						} else {
+						}
+					},
+					error: function (res) {
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

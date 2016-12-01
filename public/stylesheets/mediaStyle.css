@@ -1,0 +1,60 @@
+/*媒体查询*/
+
+/*6plus以下*/
+@media screen and (max-width: 400px) {
+    .header, .nav, .headerCon {
+        height: 80px;
+    }
+
+    .headerCon h1 {
+        line-height: 80px;
+    }
+
+    .knowMore {
+        width: 60%;
+    }
+
+    .mainCon {
+        padding-top: 100px;
+    }
+
+    .passL .passBox .boxImg {
+        width: 30%;
+        height: 80px;
+    }
+    .passL .passBox p {
+        width: 60%;
+        height: 80px;
+    }
+
+}
+
+/*width---less 1000px */
+@media screen and (max-width: 1000px) {
+    .passR {
+        display: none;
+    }
+
+    .passL {
+        float: none;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .email {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .rightList {
+        display: none;
+    }
+
+    .passMain {
+        float: none;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+}

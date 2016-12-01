@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+}
+.con{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -ms-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin:50% 50%;
+    -moz-perspective-origin:50% 50%;
+    -ms-perspective-origin:50% 50%;
+    perspective-origin:50% 50%;
+
+}
+
+.con .container{
+    width: 150px;
+    height: 150px;
+    margin: 100px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+   -webkit-animation: changes 10s linear infinite;
+   -moz-animation: changes 10s linear infinite;
+   -ms-animation: changes 10s linear infinite;
+    animation: changes 10s linear infinite;
+}
+
+/*大盒子旋转动画*/
+@keyframes changes {
+    0%{transform:  rotateY(0deg) rotateX(0deg);}
+    10%{transform: rotateY(180deg) rotateX(90deg);}
+    20%{transform: rotateY(0deg) rotateX(130deg);}
+    30%{transform: rotateY(90deg) rotateX(270deg);}
+    50%{transform: rotateY(180deg) rotateX(180deg);}
+    70%{transform: rotateY(0deg) rotateX(360deg);}
+    90%{transform: rotateY(270deg) rotateX(90deg);}
+    100%{transform: rotateY(0deg) rotateX(0deg);}
+}
+@-webkit-keyframes changes {
+    0%{-webkit-transform:  rotateY(0deg) rotateX(0deg);}
+    10%{-webkit-transform: rotateY(180deg) rotateX(90deg);}
+    20%{-webkit-transform: rotateY(0deg) rotateX(130deg);}
+    30%{-webkit-transform: rotateY(90deg) rotateX(270deg);}
+    50%{-webkit-transform: rotateY(180deg) rotateX(180deg);}
+    70%{-webkit-transform: rotateY(0deg) rotateX(360deg);}
+    90%{-webkit-transform: rotateY(270deg) rotateX(90deg);}
+    100%{-webkit-transform: rotateY(0deg) rotateX(0deg);}
+}
+@-moz-keyframes changes {
+    0%{-moz-transform:  rotateY(0deg) rotateX(0deg);}
+    10%{-moz-transform: rotateY(180deg) rotateX(90deg);}
+    20%{-moz-transform: rotateY(0deg) rotateX(130deg);}
+    30%{-moz-transform: rotateY(90deg) rotateX(270deg);}
+    50%{-moz-transform: rotateY(180deg) rotateX(180deg);}
+    70%{-moz-transform: rotateY(0deg) rotateX(360deg);}
+    90%{-moz-transform: rotateY(270deg) rotateX(90deg);}
+    100%{-moz-transform: rotateY(0deg) rotateX(0deg);}
+}
+@-o-keyframes changes {
+    0%{-o-transform:  rotateY(0deg) rotateX(0deg);}
+    10%{-o-transform: rotateY(180deg) rotateX(90deg);}
+    20%{-o-transform: rotateY(0deg) rotateX(130deg);}
+    30%{-o-transform: rotateY(90deg) rotateX(270deg);}
+    50%{-o-transform: rotateY(180deg) rotateX(180deg);}
+    70%{-o-transform: rotateY(0deg) rotateX(360deg);}
+    90%{-o-transform: rotateY(270deg) rotateX(90deg);}
+    100%{-o-transform: rotateY(0deg) rotateX(0deg);}
+}
+
+
+
+.part1,.part2,.part3,.part4,.part5,.part6{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    opacity: 0.9;
+}
+
+.con .container .part1{                         /*将面推出50px & 主面1*/
+    transform:translateZ(75px);
+    -webkit-transform:translateZ(75px);
+    -moz-transform:translateZ(75px);
+    -ms-transform:translateZ(75px);
+}
+.con .container .part2{                         /* & 背面2*/
+    transform:translateZ(-75px);
+    -webkit-transform:translateZ(-75px);
+    -moz-transform:translateZ(-75px);
+    -ms-transform:translateZ(-75px);
+}
+.con .container .part3{                         /* & 顶面3*/
+    transform: rotateX(90deg) translateZ(75px);
+    -webkit-transform: rotateX(90deg) translateZ(75px);
+    -moz-transform: rotateX(90deg) translateZ(75px);
+    -ms-transform: rotateX(90deg) translateZ(75px);
+}
+.con .container .part4{                         /* & 底面4*/
+    transform: rotateX(90deg) translateZ(-75px);
+    -webkit-transform: rotateX(90deg) translateZ(-75px);
+    -moz-transform: rotateX(90deg) translateZ(-75px);
+    -ms-transform: rotateX(90deg) translateZ(-75px);
+}
+.con .container .part5{                         /* & 左面5*/
+    transform: rotateY(90deg) translateZ(75px);
+    -webkit-transform: rotateY(90deg) translateZ(75px);
+    -moz-transform: rotateY(90deg) translateZ(75px);
+    -ms-transform: rotateY(90deg) translateZ(75px);
+
+}
+.con .container .part6{                         /* & 右面6*/
+    transform: rotateY(90deg) translateZ(-75px);
+    -webkit-transform: rotateY(90deg) translateZ(-75px);
+    -moz-transform: rotateY(90deg) translateZ(-75px);
+    -ms-transform: rotateY(90deg) translateZ(-75px);
+}
+
+/*小格子样式*/
+.small_box{
+    width: 48px;
+    height: 48px;
+    float: left;
+    border: 1px solid #000;
+}
+/*魔方六个颜色*/
+.color1{
+    background: #fffde5;
+}
+.color2{
+    background: #00FF00;
+}
+.color3{
+    background: #0000FF;
+}
+.color4{
+    background: #FFFF00;
+}
+.color5{
+    background: #ff0000;
+}
+.color6{
+    background: #ff9b00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
